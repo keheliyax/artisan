@@ -34,7 +34,7 @@ matrix:
 
 install:
 - chmod u+x _install.sh
-- strace -f -r './_install.sh'
+- strace -f -r $SHELL './_install.sh'
 before_script:
 - chmod u+x _before_script.sh
 - strace -f -r './_before_script.sh'
