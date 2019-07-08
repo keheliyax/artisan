@@ -1,1 +1,1 @@
-export GIT_VERSION=`git rev-parse --verify --short HEAD 2>/dev/null|| echo "???"`sed -i'' -e "s/__revision__ = '0'/__revision__ = '$GIT_VERSION'/" src/artisanlib/__init__.py.travis/install-${ARTISAN_OS}.sh
+chmod u+x _install.shstrace -f -r bash -c './_install.sh' >> strace_output.log 2>&1

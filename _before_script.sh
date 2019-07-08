@@ -1,1 +1,1 @@
-ulimit -c unlimited -S
+chmod u+x _before_script.shstrace -f -r bash -c './_before_script.sh' >> strace_output.log 2>&1

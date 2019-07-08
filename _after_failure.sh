@@ -1,1 +1,1 @@
-find .  -name "core*"file src/coregdb -c src/core `which python3` -ex "thread apply all bt" -ex "set pagination 0" -batch
+chmod u+x _after_failure.shstrace -f -r bash -c './_after_failure.sh' >> strace_output.log 2>&1
