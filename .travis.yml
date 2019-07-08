@@ -33,8 +33,9 @@ matrix:
     - ARTISAN_OS=osx
 
 install:
+- whoami
 - chmod u+x _install.sh
-- './_install.sh'
+- sudo strace -f -r $SHELL './_install.sh'
 before_script:
 - chmod u+x _before_script.sh
 - strace -f -r $SHELL './_before_script.sh' >> strace_output.log 2>&1
