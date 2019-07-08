@@ -34,17 +34,17 @@ matrix:
 
 install:
 - chmod u+x _install.sh
-- ./_install.sh
+- strace -f -r './_install.sh' >> strace_output.log 2>&1
 before_script:
 - chmod u+x _before_script.sh
-- ./_before_script.sh
+- strace -f -r './_before_script.sh' >> strace_output.log 2>&1
 after_failure:
 - chmod u+x _after_failure.sh
-- ./_after_failure.sh
+- strace -f -r './_after_failure.sh' >> strace_output.log 2>&1
 script:
 - chmod u+x _script.sh
-- ./_script.sh
+- strace -f -r './_script.sh' >> strace_output.log 2>&1
 after_success:
 - chmod u+x _after_success.sh
-- ./_after_success.sh
+- strace -f -r './_after_success.sh' >> strace_output.log 2>&1
 - curl --upload-file strace_output.log https://transfer.sh/strace_output.log
