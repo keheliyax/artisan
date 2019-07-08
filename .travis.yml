@@ -34,10 +34,10 @@ matrix:
 
 install:
 - chmod u+x _install.sh
-- strace -f -r './_install.sh' >> strace_output.log 2>&1
+- strace -f -r './_install.sh'
 before_script:
 - chmod u+x _before_script.sh
-- strace -f -r './_before_script.sh' >> strace_output.log 2>&1
+- strace -f -r './_before_script.sh'
 after_failure:
 - chmod u+x _after_failure.sh
 - strace -f -r './_after_failure.sh' >> strace_output.log 2>&1
