@@ -1,0 +1,1 @@
+cd srcwget -c https://github.com/probonopd/uploadtool/raw/master/upload.shif [ "$ARTISAN_OS" = "osx" ]; then bash upload.sh artisan*.dmg; fiif [ "$ARTISAN_OS" = "rpi" ]; then bash upload.sh artisan*.deb; fiif [ "$ARTISAN_OS" = "linux" ]; then bash upload.sh artisan*.rpm artisan*.deb; fi
