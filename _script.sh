@@ -1,1 +1,3 @@
-chmod u+x _script.shstrace -f -r bash -c './_script.sh' >> strace_output.log 2>&1
+# !/bin/sh
+set -e
+.travis/script-${ARTISAN_OS}.sh
