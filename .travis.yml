@@ -24,13 +24,6 @@ matrix:
     sudo: required
     dist: xenial
     env: ARTISAN_OS=rpi
-  - os: osx
-    python: 3.7
-    language: generic
-    cache:
-    - pip
-    env:
-    - ARTISAN_OS=osx
 
 install:
 - whoami
