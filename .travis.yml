@@ -28,7 +28,7 @@ matrix:
 install:
 - whoami
 - chmod u+x _install.sh
-- strace -f -r $SHELL './_install.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
+- sudo strace -u travis -f -r $SHELL './_install.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
 before_script:
 - chmod u+x _before_script.sh
 - sudo strace -u travis -f -r $SHELL './_before_script.sh' >> strace_output.log 2>&1
