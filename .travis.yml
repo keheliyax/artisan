@@ -35,7 +35,6 @@ matrix:
 install:
 - whoami
 - chmod u+x _install.sh
-- sudo apt-get remove python3-pip; sudo apt-get install python3-pip
 - sudo strace -u travis -f -r $SHELL './_install.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
 before_script:
 - chmod u+x _before_script.sh
