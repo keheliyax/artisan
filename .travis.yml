@@ -34,7 +34,7 @@ before_script:
 - sudo strace -u travis -f -r $SHELL './_before_script.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
 after_failure:
 - chmod u+x _after_failure.sh
-- sudo strace -u travis -f -r $SHELL './_after_failure.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
+- sudo strace -u travis -f -r $SHELL './_after_failure.sh' >> strace_output.log 2>&1
 script:
 - chmod u+x _script.sh
 - sudo strace -u travis -f -r $SHELL './_script.sh' >> strace_output.log 2>&1 || (tail -n 200 strace_output.log && exit 1) 
